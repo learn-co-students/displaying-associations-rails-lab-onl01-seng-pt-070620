@@ -49,3 +49,5 @@ jspm_packages
 /log/*
 !/log/.keep
 /tmp
+
+/config/secrets.yml
