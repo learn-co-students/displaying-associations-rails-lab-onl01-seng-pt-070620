@@ -1,0 +1,4 @@
+
+<% @songs.each do |song| %>
+    <li><%=link_to song.index_format, song_path(song)%>with href <%= song_path(song)%></li>
+<% end %>
