@@ -1,8 +1,18 @@
 class ArtistsController < ApplicationController
+  include ActionView::Helpers::TextHelper
+  
+  # helper_method :song_count
+  
+  # def song_count
+  #   pluralize(@artist.songs.count, 'song')
+  # end
+  
   def index
+    @artists = Artist.all
   end
 
   def show
+    @artist = Artist.find(params[:id])
   end
 
   def new
