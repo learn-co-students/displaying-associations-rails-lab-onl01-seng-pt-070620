@@ -1,8 +1,18 @@
 class SongsController < ApplicationController
+
+  # helper_method :artist_name
+  
+  # def artist_name
+  #   binding.pry
+  #   @song.artist.name
+  # end
+
   def index
+    @songs = Song.all
   end
 
   def show
+    @song = Song.find(params[:id])
   end
 
   def new
